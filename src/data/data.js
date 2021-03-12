@@ -1,11 +1,18 @@
 export const data = {
-  "about": `Computer Systems Engineer from the National Polytechnic School.
-	Passionate and interested in the development of technological
-	solutions using hardware and software components together. My
-	profile focuses on the development of both mobile and web
-	applications,over time I have focused and obtained a greater
-	amount of experience in the mobile world, however I have also done
-	work as a front-end and back-end developer.`,
+	"presonalInfo": {
+		"fullName": "Dario Herera",
+		"grade": "Computer Systems Engineer",
+		"twitter": "https://twitter.com/darii__O",
+		"linkedin": "https://www.linkedin.com/in/dario-herrera-1212541a7/",
+		"github": "https://github.com/daros10",
+		"about": `Computer Systems Engineer from the National Polytechnic School.
+		Passionate and interested in the development of technological
+		solutions using hardware and software components together. My
+		profile focuses on the development of both mobile and web
+		applications,over time I have focused and obtained a greater
+		amount of experience in the mobile world, however I have also done
+		work as a front-end and back-end developer.`,
+	},
   "education": [
     {
       "name": "Colegio Técnico Industrial “Miguel de Santiago”",

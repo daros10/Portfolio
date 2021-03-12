@@ -1,4 +1,4 @@
-import { Container, Typography } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 import React from 'react';
 import ParticlesContainer from './components/ParticlesContainer';
 import { Introduce } from './pages/Introduce';
@@ -12,6 +12,7 @@ function App() {
           position: 'relative',
           textAlign: 'center',
           marginTop: '150px',
+          marginBottom: '50px',
           marginLeft: '12px',
           marginRight: '12px',
         }}
