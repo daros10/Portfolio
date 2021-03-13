@@ -9,11 +9,23 @@ import {
   IconButton,
   Typography,
 } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import { GitHub, LinkedIn, Twitter } from '@material-ui/icons';
 import { data } from '../data/data';
 import img from '../assets/daro.png';
 
-export const LeftPanelIntroduce = () => {
+const useStyles = makeStyles({
+  opacity: {
+    color: 'white',
+    '&:hover': {
+      opacity: 0.6,
+    },
+  },
+});
+
+export const MainCardInfo = () => {
+  const classes = useStyles();
+
   return (
     <Grid item spacing={8}>
       <Card
@@ -27,8 +39,8 @@ export const LeftPanelIntroduce = () => {
           <CardMedia
             component='img'
             alt='Who am I'
-            width='348'
-            height='348'
+            width='400'
+            height='400'
             image={img}
             style={{
               objectFit: 'cover',
@@ -45,7 +57,7 @@ export const LeftPanelIntroduce = () => {
             <Grid container direction='row' justify='center' spacing={1}>
               <Grid item>
                 <IconButton
-                  style={{ color: 'white' }}
+                  className={classes.opacity}
                   onClick={() =>
                     window.open(`${data.presonalInfo.twitter}`, '_blank')
                   }
@@ -55,7 +67,7 @@ export const LeftPanelIntroduce = () => {
               </Grid>
               <Grid item>
                 <IconButton
-                  style={{ color: 'white' }}
+                  className={classes.opacity}
                   onClick={() =>
                     window.open(`${data.presonalInfo.linkedin}`, '_blank')
                   }
@@ -65,7 +77,7 @@ export const LeftPanelIntroduce = () => {
               </Grid>
               <Grid item>
                 <IconButton
-                  style={{ color: 'white' }}
+                  className={classes.opacity}
                   onClick={() =>
                     window.open(`${data.presonalInfo.github}`, '_blank')
                   }

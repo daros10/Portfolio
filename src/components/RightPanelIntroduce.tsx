@@ -1,6 +1,6 @@
 import React from 'react';
 import { data } from '../data/data';
-import { Box, Button, Divider, Grid, Typography } from '@material-ui/core';
+import { Divider, Grid, Typography } from '@material-ui/core';
 
 export const RightPanelIntroduce = () => {
   return (
@@ -11,7 +11,7 @@ export const RightPanelIntroduce = () => {
       style={{
         backgroundColor: 'transparent',
         boxShadow: 'none',
-        border: '0px solid white',
+        border: '1px solid white',
         borderRadius: '10px',
       }}
     >
@@ -27,7 +27,7 @@ export const RightPanelIntroduce = () => {
       <Grid item>
         <Divider style={{ marginTop: '10px' }} />
         <Typography
-          variant='overline'
+          variant='h6'
           style={{
             textAlign: 'justify',
             marginTop: '10px',
@@ -37,21 +37,6 @@ export const RightPanelIntroduce = () => {
           {data.presonalInfo.about}
         </Typography>
         <Divider style={{ marginTop: '10px' }} />
-      </Grid>
-      <Grid item>
-        <Box style={{ marginTop: '10px' }}>
-          <Button
-            variant='outlined'
-            style={{
-              border: '1px solid white',
-              color: 'white',
-            }}
-            fullWidth
-            size={'large'}
-          >
-            Get Started
-          </Button>
-        </Box>
       </Grid>
     </Grid>
   );

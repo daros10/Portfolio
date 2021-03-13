@@ -1,7 +1,7 @@
 import { Container } from '@material-ui/core';
 import React from 'react';
 import ParticlesContainer from './components/ParticlesContainer';
-import { Introduce } from './pages/Introduce';
+import { AppRouter } from './routes/AppRouter';
 
 function App() {
   return (
@@ -11,14 +11,10 @@ function App() {
         style={{
           position: 'relative',
           textAlign: 'center',
-          marginTop: '150px',
-          marginBottom: '50px',
-          marginLeft: '12px',
-          marginRight: '12px',
         }}
       >
         <Container fixed>
-          <Introduce />
+          <AppRouter />
         </Container>
       </div>
     </>
