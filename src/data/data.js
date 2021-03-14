@@ -9,9 +9,10 @@ export const data = {
 		Passionate and interested in the development of technological
 		solutions using hardware and software components together. My
 		profile focuses on the development of both mobile and web
-		applications,over time I have focused and obtained a greater
+		applications, over time I have focused and obtained a greater
 		amount of experience in the mobile world, however I have also done
-		work as a front-end and back-end developer.`,
+		work as a front-end and back-end developer.
+		Some of my favorite languages, technologies and frameworks are:`,
 	},
   "education": [
     {
@@ -125,5 +126,22 @@ export const data = {
     "Flutter",
     "Flutter",
     "Flutter"
-  ]
+  ],
+	"favoriteLanguagesFrameworks":[
+		"Flutter",
+		"Dart",
+		"Kotlin",
+		"React",
+		"Bootstrap",
+		"MaterialUI",
+		"Angular",
+		"JavaScript",
+		"TypeScript",
+		"NodeJS",
+		"Express",
+		"Python",
+		"RaspberryPi",
+		"Arduino"
+	]
 }
+

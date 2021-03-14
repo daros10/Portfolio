@@ -105,8 +105,7 @@ export const Appbar = () => {
               className={classes.opacity}
               component={Link}
               target='_blank'
-              to='/files/test.txt'
-              download
+              to='/files/test.pdf'
             >
               <GetApp fontSize='large' />
             </IconButton>
