@@ -9,6 +9,7 @@ export const About = () => {
       <Container
         style={{
           marginTop: '50px',
+          marginBottom: '50px',
           textAlign: 'center',
           justifyContent: 'center',
         }}
@@ -16,7 +17,9 @@ export const About = () => {
         <Grid container spacing={2} justify='center'>
           <Grid
             item
-            xs={7}
+            xs={12}
+            sm={7}
+            md={7}
             alignItems='center'
             style={{
               border: '1px solid white',

@@ -21,7 +21,7 @@ export const data = {
       "speciality": "Electrónica de Consumo."
     },
     {
-      "name": "Escuela Politécnica Nacional”",
+      "name": "Escuela Politécnica Nacional",
       "grade": "College",
       "speciality": "Ingeniería en Sistemas Informáticos y de Computación."
     }
