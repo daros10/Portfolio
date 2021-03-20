@@ -105,7 +105,7 @@ export const Appbar = () => {
               className={classes.opacity}
               component={Link}
               target='_blank'
-              to='/files/test.pdf'
+              to='/files/CV-Dario-Herrera.pdf'
             >
               <GetApp fontSize='large' />
             </IconButton>

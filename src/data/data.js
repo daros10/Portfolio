@@ -35,7 +35,7 @@ export const data = {
 					"url": "https://www.udemy.com/certificate/UC-65c50b1b-1db4-4a19-9098-6c782203f8ea/"
 				},
 				{
-					"name": "Andriod con Kotlin, Firebase y Google",
+					"name": "Android con Kotlin, Firebase y Google",
 					"url": "https://www.udemy.com/certificate/UC-a85ccaf3-c77e-4bff-ba2a-254a4c4a3dbd/"
 				},
 				{
