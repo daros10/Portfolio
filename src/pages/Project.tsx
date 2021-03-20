@@ -41,10 +41,14 @@ export const Project = () => {
                     marginTop: '10px',
                   }}
                 >
-                  <CardContent>
+                  <CardContent style={{ textAlign: 'inherit' }}>
                     <Typography
-                      variant='overline'
-                      style={{ fontWeight: 'bold', color: 'white' }}
+                      variant='h5'
+                      style={{
+                        fontWeight: 'bold',
+                        color: 'white',
+                        textAlign: 'center',
+                      }}
                     >
                       <Link href={data.github} target='_blank' color='inherit'>
                         {data.name}
@@ -58,11 +62,9 @@ export const Project = () => {
                       }}
                     />
                     <Typography
-                      variant='body2'
+                      variant='overline'
                       style={{
-                        fontWeight: 'bold',
                         color: 'white',
-                        textAlign: 'justify',
                       }}
                     >
                       {data.description}
@@ -116,10 +118,14 @@ export const Project = () => {
                     marginTop: '10px',
                   }}
                 >
-                  <CardContent>
+                  <CardContent style={{ textAlign: 'inherit' }}>
                     <Typography
-                      variant='overline'
-                      style={{ fontWeight: 'bold', color: 'white' }}
+                      variant='h5'
+                      style={{
+                        fontWeight: 'bold',
+                        color: 'white',
+                        textAlign: 'center',
+                      }}
                     >
                       <Link href={data.github} target='_blank' color='inherit'>
                         {data.name}
@@ -133,7 +139,7 @@ export const Project = () => {
                       }}
                     />
                     <Typography
-                      variant='body2'
+                      variant='overline'
                       style={{
                         fontWeight: 'bold',
                         color: 'white',
