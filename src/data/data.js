@@ -185,6 +185,16 @@ export const data = {
 			]
     },
 		{
+      "name": "Pico Placa Predictor",
+      "description": `Es una aplicación web que permite predecir las medidas regulatorias concernientes a la movilidad de acuerdo a las 
+			placas de los vehiculos del territorios ecuatoriano.`,
+      "github": "https://github.com/daros10/Pico-and-Placa",
+      "languagesTools": [
+				"React",
+				"MaterialUI", 
+			]
+    },
+		{
       "name": "NEWS APP",
       "description": `Es una aplicación móvil que permite obtener las noticias del mundo actual, en esta el usuario puede elegir 
 			tópicos tales como: General, Salud, Tecnología y Deportes.`,
