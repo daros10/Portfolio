@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import { MainCardInfo } from '../components/MainCardInfo';
+import { Animated } from 'react-animated-css';
 
 export const Introduce = () => {
   return (
@@ -10,9 +11,14 @@ export const Introduce = () => {
         spacing={5}
         justify='center'
         alignItems='center'
-        style={{ marginTop: '80px' }}
+        style={{
+          marginTop: '80px',
+          marginBottom: '20px',
+        }}
       >
-        <MainCardInfo />
+        <Animated animationIn='fadeIn' animationOut='fadeOut' isVisible={true}>
+          <MainCardInfo />
+        </Animated>
       </Grid>
     </>
   );

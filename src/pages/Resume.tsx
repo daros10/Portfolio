@@ -6,12 +6,14 @@ import {
   Container,
   Divider,
   Grid,
+  Link,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
   Typography,
 } from '@material-ui/core';
+import { Animated } from 'react-animated-css';
 import { data } from '../data/data';
 import { PlayArrowRounded } from '@material-ui/icons';
 import { generateRandomColor } from '../utils/Utlis';
@@ -20,124 +22,158 @@ export const Resume = () => {
   return (
     <>
       <Container fixed style={{ marginTop: '50px', marginBottom: '50px' }}>
-        <Typography
-          variant='h4'
-          style={{ fontWeight: 'bold', textAlign: 'left' }}
-        >
-          Education
-        </Typography>
-        <Grid container spacing={4}>
-          {data.education.map((data, index) => (
-            <Grid
-              key={`${index}${data.name}`}
-              item
-              direction='row'
-              xs={12}
-              sm={6}
-            >
-              <Card
-                variant='outlined'
-                style={{
-                  backgroundColor: 'transparent',
-                  border: '1px solid white',
-                  marginTop: '10px',
-                }}
+        <Animated animationIn='fadeIn' animationOut='fadeOut' isVisible={true}>
+          <Typography
+            variant='h4'
+            style={{ fontWeight: 'bold', textAlign: 'left' }}
+          >
+            Educación
+          </Typography>
+          <Grid container spacing={4} justify='center' alignItems='center'>
+            {data.education.map((data, index) => (
+              <Grid
+                key={`${index}${data.name}`}
+                item
+                direction='row'
+                xs={12}
+                sm={6}
               >
-                <CardContent>
-                  <Typography variant='h5' style={{ fontWeight: 'bold' }}>
-                    {data.grade}
-                  </Typography>
-                  <Divider
-                    style={{
-                      backgroundColor: 'white',
-                      marginTop: '5px',
-                      marginBottom: '5px',
-                    }}
-                  />
-                  <Typography
-                    variant='h6'
-                    style={{ fontWeight: 'bold', color: 'white' }}
-                  >
-                    {data.name}
-                  </Typography>
-                  <Typography
-                    variant='overline'
-                    style={{ fontWeight: 'bold', color: 'white' }}
-                  >
-                    {data.speciality}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-        <Typography
-          variant='h4'
-          style={{ fontWeight: 'bold', textAlign: 'left', marginTop: '15px' }}
-        >
-          Experience
-        </Typography>
-        <Grid container spacing={4} justify='center' alignItems='center'>
-          {data.experience.map((data, index) => (
-            <Grid
-              key={`${index}${data.nameFactory}`}
-              item
-              direction='row'
-              xs={12}
-              sm={6}
-            >
-              <Card
-                style={{
-                  backgroundColor: 'transparent',
-                  border: '1px solid white',
-                  marginTop: '10px',
-                }}
-              >
-                <CardHeader
-                  title={
+                <Card
+                  variant='outlined'
+                  style={{
+                    backgroundColor: 'transparent',
+                    border: '1px solid white',
+                    marginTop: '10px',
+                  }}
+                >
+                  <CardContent>
                     <Typography variant='h5' style={{ fontWeight: 'bold' }}>
-                      {data.nameFactory}
+                      {data.grade}
                     </Typography>
-                  }
-                  subheader={
+                    <Divider
+                      style={{
+                        backgroundColor: 'white',
+                        marginTop: '5px',
+                        marginBottom: '5px',
+                      }}
+                    />
+                    <Typography
+                      variant='h6'
+                      style={{ fontWeight: 'bold', color: 'white' }}
+                    >
+                      {data.name}
+                    </Typography>
                     <Typography
                       variant='overline'
                       style={{ fontWeight: 'bold', color: 'white' }}
                     >
-                      {data.dateStar} - {data.dateEnd}
+                      {data.speciality}
                     </Typography>
-                  }
-                />
-              </Card>
-              <CardContent
-                style={{
-                  backgroundColor: 'transparent',
-                  border: '1px solid white',
-                  textAlign: 'center',
-                }}
+                    {data.course !== undefined &&
+                      data.course.map((info, index) => (
+                        <ListItem key={index}>
+                          <ListItemIcon>
+                            <PlayArrowRounded
+                              style={{
+                                color: `${generateRandomColor()}`,
+                              }}
+                            />
+                          </ListItemIcon>
+                          <ListItemText
+                            style={{
+                              color: 'white',
+                              textAlign: 'justify',
+                            }}
+                          >
+                            <Link
+                              href={info.url}
+                              target='_blank'
+                              color='inherit'
+                            >
+                              {info.name}
+                            </Link>
+                          </ListItemText>
+                        </ListItem>
+                      ))}
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+          <Typography
+            variant='h4'
+            style={{ fontWeight: 'bold', textAlign: 'left', marginTop: '15px' }}
+          >
+            Experiencia
+          </Typography>
+          <Grid container spacing={4} justify='center' alignItems='center'>
+            {data.experience.map((data, index) => (
+              <Grid
+                key={`${index}${data.nameFactory}`}
+                item
+                direction='row'
+                xs={12}
+                sm={6}
               >
-                <List component='nav'>
-                  {data.tasks.map((task, index) => (
-                    <ListItem key={index}>
-                      <ListItemIcon>
-                        <PlayArrowRounded
-                          style={{
-                            color: `${generateRandomColor()}`,
-                          }}
-                        />
-                      </ListItemIcon>
-                      <ListItemText
-                        style={{ color: 'white', textAlign: 'justify' }}
+                <Card
+                  style={{
+                    backgroundColor: 'transparent',
+                    border: '1px solid white',
+                    marginTop: '10px',
+                  }}
+                >
+                  <CardHeader
+                    title={
+                      <Typography variant='h5' style={{ fontWeight: 'bold' }}>
+                        <Link
+                          href={data.website}
+                          target='_blank'
+                          color='inherit'
+                        >
+                          {data.nameFactory}
+                        </Link>
+                      </Typography>
+                    }
+                    subheader={
+                      <Typography
+                        variant='overline'
+                        style={{ fontWeight: 'bold', color: 'white' }}
                       >
-                        {task}
-                      </ListItemText>
-                    </ListItem>
-                  ))}
-                </List>
-              </CardContent>
-            </Grid>
-          ))}
-        </Grid>
+                        {data.dateStar} - {data.dateEnd}
+                      </Typography>
+                    }
+                  />
+                </Card>
+                <CardContent
+                  style={{
+                    backgroundColor: 'transparent',
+                    border: '1px solid white',
+                    textAlign: 'center',
+                  }}
+                >
+                  <List component='nav'>
+                    {data.tasks.map((task, index) => (
+                      <ListItem key={index}>
+                        <ListItemIcon>
+                          <PlayArrowRounded
+                            style={{
+                              color: `${generateRandomColor()}`,
+                            }}
+                          />
+                        </ListItemIcon>
+                        <ListItemText
+                          style={{ color: 'white', textAlign: 'justify' }}
+                        >
+                          {task}
+                        </ListItemText>
+                      </ListItem>
+                    ))}
+                  </List>
+                </CardContent>
+              </Grid>
+            ))}
+          </Grid>
+        </Animated>
       </Container>
     </>
   );

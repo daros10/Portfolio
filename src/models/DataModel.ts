@@ -11,6 +11,12 @@ export interface Education {
   name: string;
   grade: string;
   speciality: string;
+  course?: [
+    {
+      name: string;
+      url: string;
+    }
+  ];
 }
 
 export interface Experience {
@@ -18,6 +24,7 @@ export interface Experience {
   role: string;
   dateStar: string;
   dateEnd: string;
+  website: string;
   tasks: string[];
 }
 
