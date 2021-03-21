@@ -20,8 +20,8 @@ export const About = () => {
             <Grid
               item
               xs={12}
-              sm={7}
-              md={7}
+              sm={6}
+              md={6}
               alignItems='center'
               style={{
                 border: '1px solid white',
@@ -30,16 +30,10 @@ export const About = () => {
               }}
             >
               <Typography
-                variant='h2'
+                variant='h3'
                 style={{ fontWeight: 'bold', margin: '10px' }}
               >
-                Hola
-              </Typography>
-              <Typography
-                variant='h4'
-                style={{ fontWeight: 'bold', margin: '10px' }}
-              >
-                Esto es lo que soy y lo que hago
+                Biografía
               </Typography>
               <Divider style={{ backgroundColor: 'white', margin: '10px' }} />
               <Typography
@@ -65,6 +59,43 @@ export const About = () => {
             </Grid>
           </Grid>
         </Animated>
+        <Grid container style={{ marginTop: '10px' }} justify='center'>
+          <Grid item xs={12} sm={8} direction='row'>
+            <Typography
+              variant='h3'
+              style={{
+                textAlign: 'center',
+                marginTop: '30px',
+                marginBottom: '10px',
+                fontWeight: 'bold',
+              }}
+            >
+              Skills
+            </Typography>
+            <Animated
+              animationInDelay={800}
+              animationIn='flash'
+              animationOut='fadeOut'
+              isVisible={true}
+            >
+              {data.skills.map((skill, index) => (
+                <Chip
+                  variant='outlined'
+                  key={`${skill}+${index}`}
+                  label={`${skill}`}
+                  style={{
+                    borderColor: `${generateRandomColor()}`,
+                    color: 'white',
+                    marginLeft: '10px',
+                    marginRight: '3px',
+                    marginBottom: '10px',
+                    fontWeight: 'bold',
+                  }}
+                />
+              ))}
+            </Animated>
+          </Grid>
+        </Grid>
       </Container>
     </>
   );

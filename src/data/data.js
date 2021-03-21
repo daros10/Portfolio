@@ -9,7 +9,7 @@ export const data = {
 		Escuela Politécnica Nacional.
 		Apasionado por el desarrollo de soluciones tecnológicas involucrando
 		componentes de hardware y software. 
-		Mi perfil y preferencia estan enfocados en el desarrollo de aplicaciones 
+		Mi perfil y preferencia están enfocados en el desarrollo de aplicaciones 
 		móviles, sin embargo en el transcurso del tiempo he adquirido habilidades
 		y experiencia tanto como desarrollador Frontend y Backend.
 		Algunos de mis lenguajes, tecnológias y frameworks favoritos son:`,
@@ -260,13 +260,31 @@ export const data = {
   ],
   "skills": [
     "Flutter",
-    "Flutter",
-    "Flutter",
-    "Flutter",
-    "Flutter",
-    "Flutter",
-    "Flutter",
-    "Flutter"
+    "Dart",
+    "Kotlin",
+    "Android",
+    "JavaScript",
+    "TypeScript",
+		"Python",
+		"HTML",
+		"CSS",
+		"Bootstrap",
+		"Material-UI",
+		"Angular",
+		"React",
+		"NgRx",
+		"Redux",
+		"RxJS",
+		"NodeJS",
+		"MongoDB",
+		"Express",
+    "Firebase",
+		"AWS",
+		"MySQL",
+		"PostgreSQL",
+		"Git",
+		"RaspberryPì",
+		"Arduino"
   ],
 	"favoriteLanguagesFrameworks":[
 		"Flutter",

@@ -51,7 +51,7 @@ export const Project = () => {
                       }}
                     >
                       <Link href={data.github} target='_blank' color='inherit'>
-                        {data.name}
+                        {data.name.toUpperCase()}
                       </Link>
                     </Typography>
                     <Divider
@@ -128,7 +128,7 @@ export const Project = () => {
                       }}
                     >
                       <Link href={data.github} target='_blank' color='inherit'>
-                        {data.name}
+                        {data.name.toLocaleUpperCase()}
                       </Link>
                     </Typography>
                     <Divider
