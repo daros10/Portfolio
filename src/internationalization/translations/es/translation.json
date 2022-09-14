@@ -1,0 +1,16 @@
+{
+  "fullName": "Dario Herrera",
+  "appBar": {
+    "home": "Inicio",
+    "summary": "Resumen",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "download": "Descargas",
+    "language": "Lenguaje"
+  },
+  "about": {
+    "aboutMeTitle": "Acerca de",
+    "skills": "Skills",
+    "aboutMeDescription": "Ingeniero en Sistemas Informáticos y de Computación graduado en la\nEscuela Politécnica Nacional.\nApasionado por el desarrollo de soluciones tecnológicas involucrando\ncomponentes de hardware y software. \nMi perfil y preferencia están enfocados en el desarrollo de aplicaciones \nmóviles, sin embargo en el transcurso del tiempo he adquirido habilidades\ny experiencia tanto como desarrollador Frontend y Backend.\nAlgunos de mis lenguajes, tecnológias y frameworks favoritos son"
+  }
+}

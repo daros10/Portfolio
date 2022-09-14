@@ -1,0 +1,16 @@
+{
+  "fullName": "Dario Herrera",
+  "appBar": {
+    "home": "Home",
+    "summary": "Summary",
+    "experience": "Experience",
+    "projects": "Projects",
+    "download": "Downloads",
+    "language": "Language"
+  },
+  "about": {
+    "aboutMeTitle": "About",
+    "skills": "Skills",
+    "aboutMeDescription": "Computer and Information Systems Engineer graduated from the\nNational polytechnic school.\nPassionate about the development of technological solutions involving\nhardware and software components.\nMy profile and preference are focused on application development\nmobiles, however in the course of time he acquired skills\nand experience both as a Frontend and Backend developer.\nSome of my favorite languages, technologies and frameworks are"
+  }
+}
