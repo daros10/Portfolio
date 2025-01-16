@@ -21,7 +21,7 @@ export const appbarStyles = makeStyles({
     },
   },
   iconButtonTooltipActive: {
-    color: (props) => get(props, "randomColor", "white"),
+    opacity: 0.6,
     paddingTop: "1px",
     borderRadius: "0px",
     borderBottomWidth: "2px",

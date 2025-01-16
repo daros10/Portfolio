@@ -5,7 +5,7 @@ import { LanguageEnum } from "../../constants/LanguageEnum";
 
 i18n
   .init({
-    lng: LanguageEnum.ES,
+    lng: LanguageEnum.EN,
     interpolation: {
       escapeValue: false,
     },

@@ -17,6 +17,8 @@ import { data } from "../../data/data";
 import { generateRandomColor } from "../../utils/Utlis";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useTranslation } from "react-i18next";
+import { Avatar } from "@mui/material";
+import { get } from "lodash";
 
 export const Project = () => {
   const { t } = useTranslation();
@@ -41,7 +43,7 @@ export const Project = () => {
                 variant="h4"
                 style={{ fontWeight: "bold", textAlign: "left" }}
               >
-                Proyectos Profesionales
+                {t("experience.titleProfessionalProjects")}
               </Typography>
             </AccordionSummary>
             <hr />
@@ -63,13 +65,12 @@ export const Project = () => {
                         marginTop: "10px",
                       }}
                     >
-                      <CardContent style={{ textAlign: "inherit" }}>
+                      <CardContent style={{ textAlign: "center" }}>
                         <Typography
                           variant="h5"
                           style={{
                             fontWeight: "bold",
                             color: "white",
-                            textAlign: "center",
                           }}
                         >
                           <Link
@@ -77,7 +78,7 @@ export const Project = () => {
                             target="_blank"
                             color="inherit"
                           >
-                            {data.name.toUpperCase()}
+                            {data.name}
                           </Link>
                         </Typography>
                         <Divider
@@ -88,7 +89,7 @@ export const Project = () => {
                           }}
                         />
                         <Typography
-                          variant="overline"
+                          variant="body1"
                           style={{
                             color: "white",
                           }}
@@ -105,7 +106,13 @@ export const Project = () => {
                         {data.languagesTools.map((data, index) => (
                           <Chip
                             key={`${data}+${index}`}
-                            label={`${data}`}
+                            label={`${data.title}`}
+                            avatar={
+                              <Avatar
+                                alt={get(data, "title", "").at(0)}
+                                src={data.icon}
+                              />
+                            }
                             style={{
                               backgroundColor: `${generateRandomColor()}`,
                               color: "white",
@@ -125,7 +132,7 @@ export const Project = () => {
           </Accordion>
           <br />
           <Accordion
-            defaultExpanded={false}
+            defaultExpanded={true}
             style={{
               backgroundColor: "transparent",
               borderColor: "white",
@@ -140,7 +147,7 @@ export const Project = () => {
                 variant="h4"
                 style={{ fontWeight: "bold", textAlign: "left" }}
               >
-                Proyectos Personales
+                {t("experience.titlePersonalProjects")}
               </Typography>
             </AccordionSummary>
             <hr />
@@ -162,7 +169,7 @@ export const Project = () => {
                         marginTop: "10px",
                       }}
                     >
-                      <CardContent style={{ textAlign: "inherit" }}>
+                      <CardContent style={{ textAlign: "center" }}>
                         <Typography
                           variant="h5"
                           style={{
@@ -187,11 +194,9 @@ export const Project = () => {
                           }}
                         />
                         <Typography
-                          variant="overline"
+                          variant="body1"
                           style={{
-                            fontWeight: "bold",
                             color: "white",
-                            textAlign: "justify",
                           }}
                         >
                           {data.description}
@@ -206,7 +211,13 @@ export const Project = () => {
                         {data.languagesTools.map((data, index) => (
                           <Chip
                             key={`${data}+${index}`}
-                            label={`${data}`}
+                            label={`${data.title}`}
+                            avatar={
+                              <Avatar
+                                alt={get(data, "title", "").at(0)}
+                                src={data.icon}
+                              />
+                            }
                             style={{
                               backgroundColor: `${generateRandomColor()}`,
                               color: "white",

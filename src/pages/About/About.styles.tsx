@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { generateRandomColor } from "../../utils/Utlis";
 
 export const aboutStyles = makeStyles({
   mainContainer: {
@@ -16,6 +15,7 @@ export const aboutStyles = makeStyles({
   textAbout: {
     fontWeight: "bold",
     margin: "10px",
+    textAlign: "center",
   },
   divider: {
     backgroundColor: "white",
@@ -26,7 +26,6 @@ export const aboutStyles = makeStyles({
     margin: "10px",
   },
   chips: {
-    backgroundColor: `${generateRandomColor()}`,
     color: "white",
     marginLeft: "10px",
     marginRight: "3px",
@@ -36,7 +35,7 @@ export const aboutStyles = makeStyles({
   titleSkills: {
     textAlign: "center",
     marginTop: "30px",
-    marginBottom: "10px",
+    marginBottom: "20px",
     fontWeight: "bold",
   },
   secondaryGrid: {

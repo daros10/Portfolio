@@ -8,7 +8,9 @@ import { PortfolioConstants } from "../../../constants/PortfolioConstants";
 
 export const useAppbarState = (): IUseAppbarState => {
   const { t, i18n } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState<string>("en");
+  const [currentLanguage, setCurrentLanguage] = useState<string>(
+    LanguageEnum.ES
+  );
   const [randomColorIconButton, setRandomColorIconButton] = useState<string>(
     generateRandomColor()
   );

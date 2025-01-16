@@ -4,8 +4,10 @@ import {
   AccordionDetails,
   AccordionSummary,
   Card,
+  CardActionArea,
   CardContent,
   CardHeader,
+  CardMedia,
   Container,
   Divider,
   Grid,
@@ -46,7 +48,115 @@ export const Resume = () => {
                 variant="h4"
                 style={{ fontWeight: "bold", textAlign: "left" }}
               >
-                Educación
+                {t("experience.title")}
+              </Typography>
+            </AccordionSummary>
+            <hr />
+            <AccordionDetails>
+              <Grid container spacing={4} justify="center" alignItems="center">
+                {data(t)
+                  .experience.reverse()
+                  .map((data, index) => (
+                    <Grid
+                      key={`${index}${data.nameFactory}`}
+                      item
+                      direction="row"
+                      xs={12}
+                      sm={6}
+                    >
+                      <Card
+                        style={{
+                          backgroundColor: "transparent",
+                          border: "1px solid white",
+                          marginTop: "10px",
+                        }}
+                      >
+                        <CardActionArea>
+                          <CardMedia component="img" image={data.icon} />
+                          <Divider style={{ backgroundColor: "white" }} />
+                          <CardHeader
+                            title={
+                              <Typography
+                                variant="h5"
+                                style={{
+                                  fontWeight: "bold",
+                                  textAlign: "center",
+                                }}
+                              >
+                                <Link
+                                  href={data.website}
+                                  target="_blank"
+                                  color="inherit"
+                                >
+                                  {data.nameFactory}
+                                </Link>
+                              </Typography>
+                            }
+                            subheader={
+                              <Typography
+                                variant="body2"
+                                style={{
+                                  fontWeight: "bold",
+                                  color: "white",
+                                  textAlign: "center",
+                                }}
+                              >
+                                {data.role} <br />
+                                {data.dateStar} - {data.dateEnd}
+                              </Typography>
+                            }
+                          />
+                        </CardActionArea>
+                      </Card>
+                      <CardContent
+                        style={{
+                          backgroundColor: "transparent",
+                          border: "1px solid white",
+                          textAlign: "center",
+                        }}
+                      >
+                        <List component="nav">
+                          {data.tasks.map((task, index) => (
+                            <ListItem key={index}>
+                              <ListItemIcon>
+                                <PlayArrowRounded
+                                  style={{
+                                    color: `${generateRandomColor()}`,
+                                  }}
+                                />
+                              </ListItemIcon>
+                              <ListItemText
+                                style={{ color: "white", textAlign: "justify" }}
+                              >
+                                {task}
+                              </ListItemText>
+                            </ListItem>
+                          ))}
+                        </List>
+                      </CardContent>
+                    </Grid>
+                  ))}
+              </Grid>
+            </AccordionDetails>
+          </Accordion>
+          <br />
+          <Accordion
+            defaultExpanded={true}
+            style={{
+              backgroundColor: "transparent",
+              borderColor: "white",
+              border: "1px solid white",
+              borderRadius: "10px",
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
+            >
+              <Typography
+                variant="h4"
+                style={{ fontWeight: "bold", textAlign: "left" }}
+              >
+                {t("education.educationTitle")}
               </Typography>
             </AccordionSummary>
             <hr />
@@ -68,151 +178,69 @@ export const Resume = () => {
                         marginTop: "10px",
                       }}
                     >
-                      <CardContent>
-                        <Typography variant="h5" style={{ fontWeight: "bold" }}>
-                          {data.grade}
-                        </Typography>
-                        <Divider
-                          style={{
-                            backgroundColor: "white",
-                            marginTop: "5px",
-                            marginBottom: "5px",
-                          }}
-                        />
-                        <Typography
-                          variant="h6"
-                          style={{ fontWeight: "bold", color: "white" }}
-                        >
-                          {data.name}
-                        </Typography>
-                        <Typography
-                          variant="overline"
-                          style={{ fontWeight: "bold", color: "white" }}
-                        >
-                          {data.speciality}
-                        </Typography>
-                        {data.course !== undefined &&
-                          data.course.map((info, index) => (
-                            <ListItem key={index}>
-                              <ListItemIcon>
-                                <PlayArrowRounded
-                                  style={{
-                                    color: `${generateRandomColor()}`,
-                                  }}
-                                />
-                              </ListItemIcon>
-                              <ListItemText
-                                style={{
-                                  color: "white",
-                                  textAlign: "justify",
-                                }}
-                              >
-                                <Link
-                                  href={info.url}
-                                  target="_blank"
-                                  color="inherit"
-                                >
-                                  {info.name}
-                                </Link>
-                              </ListItemText>
-                            </ListItem>
-                          ))}
-                      </CardContent>
-                    </Card>
-                  </Grid>
-                ))}
-              </Grid>
-            </AccordionDetails>
-          </Accordion>
-          <br />
-          <Accordion
-            defaultExpanded={false}
-            style={{
-              backgroundColor: "transparent",
-              borderColor: "white",
-              border: "1px solid white",
-              borderRadius: "10px",
-            }}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
-            >
-              <Typography
-                variant="h4"
-                style={{ fontWeight: "bold", textAlign: "left" }}
-              >
-                Expreciencia
-              </Typography>
-            </AccordionSummary>
-            <hr />
-            <AccordionDetails>
-              <Grid container spacing={4} justify="center" alignItems="center">
-                {data(t).experience.map((data, index) => (
-                  <Grid
-                    key={`${index}${data.nameFactory}`}
-                    item
-                    direction="row"
-                    xs={12}
-                    sm={6}
-                  >
-                    <Card
-                      style={{
-                        backgroundColor: "transparent",
-                        border: "1px solid white",
-                        marginTop: "10px",
-                      }}
-                    >
-                      <CardHeader
-                        title={
+                      <CardActionArea>
+                        <CardMedia component="img" image={data.icon} />
+                        <CardContent>
                           <Typography
                             variant="h5"
                             style={{ fontWeight: "bold" }}
+                            align={"center"}
                           >
-                            <Link
-                              href={data.website}
-                              target="_blank"
-                              color="inherit"
-                            >
-                              {data.nameFactory}
-                            </Link>
+                            {data.grade}
                           </Typography>
-                        }
-                        subheader={
+                          <Divider
+                            style={{
+                              backgroundColor: "white",
+                              marginTop: "5px",
+                              marginBottom: "5px",
+                            }}
+                          />
                           <Typography
-                            variant="overline"
+                            variant="h6"
                             style={{ fontWeight: "bold", color: "white" }}
+                            align={"center"}
                           >
-                            {data.dateStar} - {data.dateEnd}
+                            {data.name}
                           </Typography>
-                        }
-                      />
+                          <Typography
+                            variant="body2"
+                            style={{
+                              fontWeight: "bold",
+                              color: "white",
+                              textAlign: "center",
+                            }}
+                          >
+                            {data.speciality}
+                          </Typography>
+                          {data.course !== undefined &&
+                            data.course.map((info, index) => (
+                              <ListItem key={index}>
+                                <ListItemIcon>
+                                  <PlayArrowRounded
+                                    style={{
+                                      color: `${generateRandomColor()}`,
+                                    }}
+                                  />
+                                </ListItemIcon>
+                                <ListItemText
+                                  style={{
+                                    color: "white",
+                                    textAlign: "justify",
+                                  }}
+                                >
+                                  <Link
+                                    href={info.url}
+                                    target="_blank"
+                                    color="inherit"
+                                  >
+                                    {info.name}
+                                  </Link>
+                                </ListItemText>
+                              </ListItem>
+                            ))}
+                        </CardContent>
+                      </CardActionArea>
                     </Card>
-                    <CardContent
-                      style={{
-                        backgroundColor: "transparent",
-                        border: "1px solid white",
-                        textAlign: "center",
-                      }}
-                    >
-                      <List component="nav">
-                        {data.tasks.map((task, index) => (
-                          <ListItem key={index}>
-                            <ListItemIcon>
-                              <PlayArrowRounded
-                                style={{
-                                  color: `${generateRandomColor()}`,
-                                }}
-                              />
-                            </ListItemIcon>
-                            <ListItemText
-                              style={{ color: "white", textAlign: "justify" }}
-                            >
-                              {task}
-                            </ListItemText>
-                          </ListItem>
-                        ))}
-                      </List>
-                    </CardContent>
                   </Grid>
                 ))}
               </Grid>

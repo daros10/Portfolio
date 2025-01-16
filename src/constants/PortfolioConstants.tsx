@@ -7,10 +7,10 @@ import {
   Laptop,
   LibraryBooks,
   GTranslate,
-  ChildCareRounded,
   Twitter,
   LinkedIn,
   GitHub,
+  Home,
 } from "@material-ui/icons";
 import { RoutesEnum } from "./RoutesEnum";
 import { TFunction } from "react-i18next";
@@ -25,7 +25,7 @@ export const ICON_BUTTON_VALUES = (
       redirectTo: RoutesEnum.INDEX,
       component: NavLink,
       isLink: true,
-      icon: <ChildCareRounded fontSize="large" />,
+      icon: <Home fontSize="large" />,
     },
     {
       title: `${t("appBar.summary")}`,
@@ -92,17 +92,4 @@ export const SOCIAL_NETWORK_INFO = (
 export enum PortfolioConstants {
   SPANISH_ALERT_MESSAGE = "Versión en español aplicada con éxito.",
   ENGLISH_ALERT_MESSAGE = "English version successfully applied.",
-}
-
-export enum LargeTexts {
-  ABOUT_DESCRIPTION_SPANISH = `
-    Ingeniero en Sistemas Informáticos y de Computación graduado en la 
-		Escuela Politécnica Nacional.
-		Apasionado por el desarrollo de soluciones tecnológicas involucrando
-		componentes de hardware y software. 
-		Mi perfil y preferencia están enfocados en el desarrollo de aplicaciones 
-		móviles, sin embargo en el transcurso del tiempo he adquirido habilidades
-		y experiencia tanto como desarrollador Frontend y Backend.
-		Algunos de mis lenguajes, tecnológias y frameworks favoritos son
-  `,
 }
