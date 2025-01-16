@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { get } from "lodash";
 
 const baseColor: string = "1px solid white";
 
