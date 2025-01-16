@@ -1,27 +1,27 @@
-import React from 'react';
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-} from 'react-router-dom';
-import { Appbar } from '../components/Appbar';
-import { About } from '../pages/About';
-import { Introduce } from '../pages/Introduce';
-import { Project } from '../pages/Project';
-import { Resume } from '../pages/Resume';
+} from "react-router-dom";
+import { Appbar } from "../components/Appbar/Appbar";
+import { About } from "../pages/About/About";
+import { Introduce } from "../pages/Introduce/Introduce";
+import { Project } from "../pages/Projects/Project";
+import { Resume } from "../pages/Resume/Resume";
+import { RoutesEnum } from "../constants/RoutesEnum";
 
 export const AppRouter = () => {
   return (
     <Router>
       <Appbar />
       <Switch>
-        <Route exact path='/' component={Introduce} />
-        <Route exact path='/about' component={About} />
-        <Route exact path='/resume' component={Resume} />
-        <Route exact path='/projects' component={Project} />
-
-        <Redirect to='/' />
+        <Route exact path={RoutesEnum.INDEX} component={Introduce} />
+        <Route exact path={RoutesEnum.ABOUT} component={About} />
+        <Route exact path={RoutesEnum.RESUME} component={Resume} />
+        <Route exact path={RoutesEnum.PROJECTS} component={Project} />
+        <Redirect to={RoutesEnum.INDEX} />
       </Switch>
     </Router>
   );

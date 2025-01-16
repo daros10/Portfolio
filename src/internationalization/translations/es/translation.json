@@ -1,0 +1,98 @@
+{
+  "fullName": "Dario Herrera",
+  "appBar": {
+    "home": "Inicio",
+    "summary": "Resumen",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "download": "Descargas",
+    "language": "Lenguaje"
+  },
+  "about": {
+    "aboutMeTitle": "Acerca de",
+    "skills": "Habilidades",
+    "aboutMeDescription": "Ingeniero en Sistemas Informáticos y de Computación graduado en la\nEscuela Politécnica Nacional.\nApasionado por el desarrollo de soluciones tecnológicas involucrando\ncomponentes de hardware y software. \nMi perfil y preferencia están enfocados en el desarrollo de aplicaciones \nmóviles, sin embargo en el transcurso del tiempo he adquirido habilidades\ny experiencia tanto como desarrollador Frontend y Backend."
+  },
+  "education": {
+    "educationTitle": "Educación",
+    "gradeTitle": "Superior",
+    "name": "Escuela Politécnica Nacional",
+    "speciality": "Ingeniería en Sistemas Informáticos y de Computación",
+    "courseTitle": "Cursos"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "titleProfessionalProjects": "Proyectos Profesionales",
+    "titlePersonalProjects": "Proyectos Personales"
+  },
+  "pazminoTask": {
+    "A": "Generación de reportes con JasperReport.",
+    "B": "Análisis para el desarrollo de aplicativos web.",
+    "C": "Diseño de base de datos para aplicativo web (MySQL, SQLServer, PostgreSQL).",
+    "D": "Desarrollo de aplicativos web (PHP, HTML5, JavaScript y Bootstrap).",
+    "E": "Soporte al cliente.",
+    "F": "Generación de documentación de desarrollo de software.",
+    "G": "Pruebas funcionales a sistemas previamente desarrollados en JavaEE."
+  },
+  "ioetTask": {
+    "A": "Desarrollo de aplicaciones móviles nativas para Android y iOS con el framework de Google Flutter y el patron BLoC.",
+    "B": "Desarrollo de aplicaciones web con el framework Angular y el patron NgRX",
+    "C": "Consumo de datos con tecnologias REST y GraphQL",
+    "D": "Manejo de diferentes servicios de Firebase",
+    "E": "Desarrollo de pruebas unitarias.",
+    "F": "Manejo de Git y Github.",
+    "G": "Desarollo de software haciendo uso de metodologías ágiles."
+  },
+  "kushkiTask": {
+    "A": "Desarollo de Micro-Servicios con: TypeScript, Go, Python, Rxjs, AWS, Serverless Framework.",
+    "B": "Desarrollo de Micro-Frontends con React usando TypeScript, Single-spa Framework, MaterialUI y Redux como patrón y manejador de estado.",
+    "C": "Uso de servicios de AWS como: DynamoDB, SystemManager, API-Gateway, Lambda Functions, X-Ray, S3, etc.",
+    "D": "Desarollo de software haciendo uso de los principios SOLID.",
+    "E": "Desarollo de software haciendo uso de TDD.",
+    "F": "CI/CD, E2E.",
+    "G": "Desarollo de software haciendo uso de metodologías ágiles."
+  },
+  "datafastTask": {
+    "A": "Desarollo de microservicios con: Node, Typescript, Java, Spring, Quarkus.",
+    "B": "Generación de infraestructura como código usando Terraform.",
+    "C": "Desarrollo de aplicaciónes móviles para plataformas Android, con Kotlin y Jetpack Compose.",
+    "D": "Desarollo de aplicaciones móviles multiplataforma usando Flutter.",
+    "E": "Desarollo y cobertura de pruebas para desarollos front-end y back-end.",
+    "F": "Administración y publicación de aplicaciones Android en Google Play",
+    "G": "Integración continua de aplicaciones móviles con Bitrise",
+    "H": "Uso de diversos recursos de AWS: Lambda, Step Functions, Dynamo, Cloudwatch, CodeBuild, CodePipeline, S3, EC2, API Gateway, entro otros.",
+    "I": "Desarollo de software haciendo uso de métodologias ágiles."
+  },
+  "goSpace": {
+    "desc": "Aidra es una IA espacial que transforma la colaboración en la oficina al comprender las necesidades de su equipo, reunirlos de forma autónoma en el espacio adecuado en el momento adecuado y eliminar la necesidad de reservar manualmente escritorios y salas"
+  },
+  "timeTracker": {
+    "desc": "Es una aplicación web desarrollada para el personal interno de la compañía ioet que expande las funcionalidades de la herramienta de pago TSheets."
+  },
+  "dish": {
+    "title": "SISTEMA PARA CONTROL DE ALIMENTACIÓN",
+    "desc": "Es un sistema web desarrollado para controlar y planificar la alimentación de los empleados de una empresa u organización. El sistema maneja roles; el Administrador es el encargado de planificar los horarios y fechas en los cuales los Usuarios podrán solicitar su alimentación. Este sistema fue construido para dar solución a las organizaciones en al reducción de costos de catering, ya que mediante la nómina o reporte generado por el sistema se puede solicitar de manera efectiva el número de platillos."
+  },
+  "home": {
+    "title": "SISTEMA DOMÓTICO",
+    "desc": "Es un sistema que cuenta con componentes de hardware y software, los cuales permiten monitorear y controlar las estancias de un hogar en tiempo real.El sistema cuenta con un aplicativo móvil desarrollado para las plataformas Android, mismo que sirve de interfaz al usuario para la alerta y ejecución de acciones.Entre algunas de las características se tiene: Control de iluminación, apertura y cierre de garaje, simulador de presencia, detección de movimiento, detección de apertura de puertas y ventanas, detección de gases nocivos, video en tiempo real, automatización del alumbrado exterior, entre otras."
+  },
+  "prediction": {
+    "desc": "Es una aplicación web que permite predecir las medidas regulatorias concernientes a la movilidad de acuerdo a las placas de los vehiculos del territorios ecuatoriano."
+  },
+  "news": {
+    "desc": "Es una aplicación móvil que permite obtener las noticias del mundo actual, en esta el usuario puede elegir tópicos tales como: General, Salud, Tecnología y Deportes."
+  },
+  "spoty": {
+    "desc": "Es una aplicación web que mediante el uso y consumo de la API de Spotify, permite listar los hits así como también la búsqueda de canciones y artistas para la posterior reproducción de los mismos."
+  },
+  "rest": {
+    "desc": "Es un servicio que permite operaciones GET, POST, PUT y DELETE, para la creación de desarrolladores de software con sus respectivas tecnologías conocidas.A demás la aplicación se encuentra dockerizada para poder ser usada en cualquier plataforma ."
+  },
+  "weather": {
+    "desc": "Es una aplicación móvil que permite obtener el clima actual, un histórico del clima de los 5 días anteriores y un pronostico de 7 días después al día consultado."
+  },
+  "protect": {
+    "desc": "Es un servicio que permite las operaciones GET, POST, PUT y DELETE para la administración de productos de una cafetería, ademas para el acceso a cada uno de los end - points, el usuario deberá estar logueado ya que se cuenta con protección de rutas."
+  }
+}

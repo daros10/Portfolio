@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import Particles from 'react-tsparticles';
+import React, { Component } from "react";
+import Particles from "react-tsparticles";
 
 class ParticlesContainer extends Component {
   render() {
     return (
       <Particles
-        id='tsparticles'
+        id="tsparticles"
         options={{
           fpsLimit: 60,
           backgroundMode: {
@@ -21,7 +21,7 @@ class ParticlesContainer extends Component {
               },
             },
             color: {
-              value: '#ff0000',
+              value: "#ff0000",
               animation: {
                 enable: true,
                 speed: 3,
@@ -29,13 +29,13 @@ class ParticlesContainer extends Component {
               },
             },
             shape: {
-              type: 'circle',
+              type: "circle",
               options: {
                 polygon: {
                   sides: 5,
                 },
                 image: {
-                  src: 'https://cdn.matteobruni.it/images/particles/github.svg',
+                  src: "https://cdn.matteobruni.it/images/particles/github.svg",
                   width: 100,
                   height: 100,
                 },
@@ -67,17 +67,17 @@ class ParticlesContainer extends Component {
             links: {
               enable: true,
               distance: 100,
-              color: '#ffffff',
+              color: "#ffffff",
               opacity: 0.4,
               width: 1,
             },
             move: {
               enable: true,
               speed: 3,
-              direction: 'none',
+              direction: "none",
               random: false,
               straight: false,
-              outMode: 'out',
+              outMode: "out",
               attract: {
                 enable: false,
                 rotateX: 600,
@@ -86,15 +86,15 @@ class ParticlesContainer extends Component {
             },
           },
           interactivity: {
-            detectsOn: 'canvas',
+            detectsOn: "canvas",
             events: {
               onHover: {
                 enable: true,
-                mode: 'repulse',
+                mode: "repulse",
               },
               onClick: {
                 enable: true,
-                mode: 'push',
+                mode: "push",
               },
               resize: true,
             },
@@ -124,11 +124,11 @@ class ParticlesContainer extends Component {
           },
           detectRetina: true,
           background: {
-            color: '#000000',
-            image: '',
-            position: '50% 50%',
-            repeat: 'no-repeat',
-            size: 'cover',
+            color: "#000000",
+            image: "",
+            position: "50% 50%",
+            repeat: "no-repeat",
+            size: "cover",
           },
         }}
       />
