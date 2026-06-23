@@ -1,15 +1,51 @@
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h5,
-p {
+:root {
+  --bg-primary: #0c0c0c;
+  --bg-secondary: #141414;
+  --text-primary: #e8e8e8;
+  --text-secondary: #8a8a8a;
+  --accent-primary: #4fd1c5;
+  --accent-secondary: #63b3ed;
+  --accent-tertiary: #a0aec0;
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  color: white;
-  background-color: black;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(79, 209, 197, 0.4);
+  border-radius: 3px;
+}
+
+::selection {
+  background: rgba(79, 209, 197, 0.2);
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
